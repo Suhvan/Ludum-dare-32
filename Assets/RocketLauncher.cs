@@ -4,7 +4,7 @@ using System.Collections;
 public class RocketLauncher : MonoBehaviour {
 
     public float rocketSpawnCD = 2;
-    private float rocketSpawnClock;
+    public float rocketSpawnClock = 0;
     private bool preEffectShown = false;
 
     public GameObject RocketPref;

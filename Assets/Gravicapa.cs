@@ -13,12 +13,17 @@ public class Gravicapa : MonoBehaviour {
 	[SerializeField]
 	private Collider2D rayCollider;
 
-	// Use this for initialization
+    [SerializeField]
+    private float pickUpSpeed;
+
+    // Use this for initialization
 	void Start () {
 		
 	}
 
 	private List<Rigidbody2D> colliders = new List<Rigidbody2D>();
+
+    private List<Rigidbody2D> people = new List<Rigidbody2D>();
 
 	public bool ForceUp
 	{
@@ -60,13 +65,29 @@ public class Gravicapa : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+    private void PickUpAllPeople(float force)
+    {
+        foreach (var elem in people)
+        {
+            if (elem != null)
+            {
+                elem.transform.position.Set(forcePoint.transform.position.x, elem.transform.position.y, elem.transform.position.z);
+                elem.velocity.Set(0, pickUpSpeed);
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.GetComponent<Thrust>() != null)
 		{
 			colliders.Add(other.GetComponent<Rigidbody2D>());
 		}
-	}
+        if (other.gameObject.GetComponent<Human>() != null)
+        {
+            people.Add(other.GetComponent<Rigidbody2D>());
+        }
+    }
 
 	void OnTriggerExit2D(Collider2D other)
 	{
@@ -74,5 +95,9 @@ public class Gravicapa : MonoBehaviour {
 		{
 			colliders.Remove(other.GetComponent<Rigidbody2D>());
 		}
-	}
+        if (other.gameObject.GetComponent<Human>() != null)
+        {
+            people.Remove(other.GetComponent<Rigidbody2D>());
+        }
+    }
 }
