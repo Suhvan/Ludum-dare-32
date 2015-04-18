@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &117116
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 499662}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &163112
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +44,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450338}
-  - {fileID: 499662}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &450338
@@ -74,18 +58,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 408324}
   m_RootOrder: 0
---- !u!4 &499662
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117116}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5.32000017, y: 3.18000007, z: .189999998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 408324}
-  m_RootOrder: 1
 --- !u!61 &6138058
 BoxCollider2D:
   m_ObjectHideFlags: 1
