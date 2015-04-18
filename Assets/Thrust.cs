@@ -8,7 +8,6 @@ public class Thrust : MonoBehaviour
 
     public float thrust = 10;
 
-
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
