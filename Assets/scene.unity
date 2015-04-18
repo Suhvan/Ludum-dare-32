@@ -343,6 +343,25 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_PrefabInternal: {fileID: 2021449932}
+--- !u!114 &512619827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 512619826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketSpawnCD: 2
+  RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
+  SpawnPoint: {fileID: 910288861}
+  PreRocketSpawnPref: {fileID: 910288861}
+  TargetPoint: {fileID: 1688359933}
+  MinHeight: 2
+  MaxHeight: 13
+  DistanceSpread: 5
 --- !u!1 &515314513
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1362485673}
+  stamina: {fileID: 0}
 --- !u!114 &1162285973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668be256d96c78c47a4273a23e237ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  looserScore: -100
 --- !u!4 &2028590472
 Transform:
   m_ObjectHideFlags: 0
@@ -1562,7 +1582,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &2029742874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,3 +1714,22 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_PrefabInternal: {fileID: 1881986379}
+--- !u!114 &2136218358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136218357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketSpawnCD: 2
+  RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
+  SpawnPoint: {fileID: 1688359933}
+  PreRocketSpawnPref: {fileID: 1688359933}
+  TargetPoint: {fileID: 910288861}
+  MinHeight: 2
+  MaxHeight: 13
+  DistanceSpread: 5
