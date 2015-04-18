@@ -24,6 +24,10 @@ public class CollisionExplosion : MonoBehaviour {
             return;
 
         Debug.Log( string.Format( "Collision with {0}", col.collider.gameObject.name ) );
+        if (col.collider.gameObject.name.StartsWith("Houses"))
+        {
+            GameCore.instance.onCityDamaged();
+        }
         Explode( col.contacts[ 0 ].point );
         Destroy( gameObject );
     }
