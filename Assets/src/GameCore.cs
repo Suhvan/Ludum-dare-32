@@ -23,5 +23,10 @@ class GameCore : MonoBehaviour
         score++;
     }
 
+    public void onCityDamaged()
+    {
+        score -= 10;
+    }
+
 }
 

@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.1299992, y: .460000008, z: 0}
+  m_LocalPosition: {x: 15.0900002, y: .460000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450338}
@@ -80,8 +80,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.22000003, y: 1.90999997, z: 0}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: -5.32000017, y: 3.18000007, z: .189999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 408324}
@@ -114,6 +114,7 @@ MonoBehaviour:
   rocketSpawnClock: 0
   RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
   SpawnPoint: {fileID: 117116}
+  PreRocketSpawnPref: {fileID: 109016, guid: e0fdf87a2055881418e3f261d6b4086c, type: 2}
   TargetPoint: {fileID: 0}
 --- !u!212 &21244164
 SpriteRenderer:

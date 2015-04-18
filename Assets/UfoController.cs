@@ -19,6 +19,9 @@ namespace Assets
 		[SerializeField]
 		Gravicapa gravicapa;
 
+        [SerializeField]
+        PukingPower pukan;
+
 		void Start()
 		{
 			
@@ -29,7 +32,9 @@ namespace Assets
 			lr.SetPosition(0, transform.position);
 			lr.SetPosition(1, cursor.transform.position);
 
-			rigidBody.AddForceAtPosition((cursor.transform.position - transform.position) * forceScale, transform.forward, ForceMode2D.Impulse);
+            Vector2 force = (cursor.transform.position - transform.position) * forceScale;
+
+            rigidBody.AddForceAtPosition( force, transform.forward, ForceMode2D.Impulse );
 
 			if (Input.GetMouseButtonDown(0))
 				gravicapa.ForceUp = true;
@@ -38,6 +43,7 @@ namespace Assets
 				gravicapa.ForceUp = false;
 
 			//Debug.DrawLine(transform.position, cursor.transform.position, Color.red);
+            pukan.ApplyThrust(force * -1.0f);
 		}
 	}
 }
