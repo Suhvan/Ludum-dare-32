@@ -8,11 +8,16 @@ public class Thrust : MonoBehaviour
 
     public float thrust = 10;
 
-    // Use this for initialization
-    void Start()
+
+    void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        rigidBody.velocity = new Vector2(4, 9);
+    }
+
+    public void SetImpulse(Vector2 velocity)
+    {
+        
+        rigidBody.velocity = velocity;
     }
 
     void OnCollisionEnter(Collision col)
@@ -35,11 +40,15 @@ public class Thrust : MonoBehaviour
     {
 
         Vector2 moveDirection = rigidBody.velocity;
-        if (moveDirection != Vector2.zero)
+        if (moveDirection.magnitude > 2)
         {
             float angle = Mathf.Atan2(-moveDirection.x, moveDirection.y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-
+        //var rotation = Quaternion.LookRotation(transform.up);
+        //float dirx = rotation.y;
+        //float diry = -rotation.x;
+        //Debug.Log(string.Format("{0} {1}", dirx, diry));
+        //rigidBody.AddForce(new Vector2(dirx, diry) * thrust);
     }
 }

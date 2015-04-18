@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -11,6 +10,7 @@ class HumanCity : MonoBehaviour
 
     public GameObject RocketPref;
     public GameObject SpawnPoint;
+    public GameObject TargetPoint;
 
     void Update () 
     {
@@ -25,8 +25,13 @@ class HumanCity : MonoBehaviour
 
     private void SpawnRocket()
     {
-        Instantiate(RocketPref, SpawnPoint.transform.position, new Quaternion(0,0,0,0));
-        Debug.Log("Pew-pew");
+        GameObject rocket = Instantiate(RocketPref, SpawnPoint.transform.position, new Quaternion(0,0,0,0)) as GameObject;
+        Thrust thrust = rocket.GetComponent<Thrust>();
+
+
+
+        thrust.SetImpulse(new Vector2((7 + Random.value * 12) * Mathf.Sign(TargetPoint.transform.position.x - transform.position.x), 4 + Random.value * 5));
+        //Debug.Log("Pew-pew");
     }
 
 
