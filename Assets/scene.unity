@@ -147,6 +147,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &512619826 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+  m_PrefabInternal: {fileID: 2021449932}
 --- !u!1 &515314513
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +211,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.209197
+  orthographic size: 23.1145229
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -640,6 +644,10 @@ Prefab:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1778396176}
+    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: TargetPoint
+      value: 
+      objectReference: {fileID: 512619826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_IsPrefabParent: 0
@@ -686,6 +694,10 @@ Prefab:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 2087512977}
+    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: TargetPoint
+      value: 
+      objectReference: {fileID: 2136218357}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_IsPrefabParent: 0
@@ -747,3 +759,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &2136218357 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+  m_PrefabInternal: {fileID: 1881986379}
