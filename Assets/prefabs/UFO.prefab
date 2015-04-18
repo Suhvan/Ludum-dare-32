@@ -362,6 +362,8 @@ MonoBehaviour:
   forceScale: .150000006
   gravicapa: {fileID: 11487036}
   pukan: {fileID: 0}
+  staminaReduceValue: .5
+  staminaIncreaseValue: .600000024
 --- !u!114 &11487036
 MonoBehaviour:
   m_ObjectHideFlags: 1

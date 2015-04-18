@@ -35,7 +35,7 @@ public class Gravicapa : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-			if (ForceUp)
+			if (ForceUp && GameCore.instance.stamina > 0)
 			{
 				AddForceForEachRocket(forceValue);
 			}

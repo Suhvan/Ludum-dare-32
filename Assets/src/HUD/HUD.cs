@@ -13,6 +13,7 @@ class HUD : MonoBehaviour
     void Update()
     {
         topPanel.score.text = GameCore.instance.score.ToString();
+		topPanel.stamina.value = GameCore.instance.stamina;
     }
 }
 

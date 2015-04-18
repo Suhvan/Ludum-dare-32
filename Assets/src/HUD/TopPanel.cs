@@ -8,6 +8,7 @@ using UnityEngine.UI;
     class TopPanel : MonoBehaviour
     {
         public Text score;
+		public Slider stamina;
     }
 
 

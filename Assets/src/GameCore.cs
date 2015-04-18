@@ -7,16 +7,24 @@ using UnityEngine;
 
 class GameCore : MonoBehaviour
 {
+	private static GameCore m_intance;
     public static GameCore instance
     {
         get
         {
-            return FindObjectOfType<GameCore>();
+			if (m_intance == null)
+			{
+				var gObj = new GameObject();
+				m_intance = gObj.AddComponent<GameCore>();
+			}
+			return m_intance;
         }
     }
 
-    public int score = 0;
+	private float m_stamina = 1.0f;
+	public float stamina { get { return m_stamina; } set { m_stamina = Mathf.Clamp01(value); } }
 
+    public int score = 0;
 
     public void OnRocketSpawn()
     {
