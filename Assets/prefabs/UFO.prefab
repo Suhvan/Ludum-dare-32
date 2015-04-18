@@ -361,9 +361,9 @@ MonoBehaviour:
   lr: {fileID: 12092630}
   forceScale: .150000006
   gravicapa: {fileID: 11487036}
-  pukan: {fileID: 0}
   staminaReduceValue: .5
   staminaIncreaseValue: .600000024
+  pukan: {fileID: 11495290}
 --- !u!114 &11487036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1541,7 +1541,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 3c5d73be4c2640a4b8fa238be7d999fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6f95c0d892147a4c830cea147afdc2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21294468
 SpriteRenderer:
@@ -1568,7 +1568,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eda0547e065c2b241a375f9d2a5035e8, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: .131034613, a: .635294139}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
