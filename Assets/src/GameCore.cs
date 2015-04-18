@@ -36,5 +36,10 @@ class GameCore : MonoBehaviour
         score -= 10;
     }
 
+    public void onExplosionStack()
+    {
+        score += 3;
+    }
+
 }
 

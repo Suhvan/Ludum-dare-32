@@ -24,10 +24,17 @@ public class CollisionExplosion : MonoBehaviour {
             return;
 
         Debug.Log( string.Format( "Collision with {0}", col.collider.gameObject.name ) );
-        if (col.collider.gameObject.name.StartsWith("Houses"))
+        switch(col.collider.gameObject.name)
         {
-            GameCore.instance.onCityDamaged();
+            case "Houses":
+                GameCore.instance.onCityDamaged();
+                break;
+            case "Rocket(Clone)":
+                GameCore.instance.onExplosionStack();
+                break;
+
         }
+        
         Explode( col.contacts[ 0 ].point );
         Destroy( gameObject );
     }
