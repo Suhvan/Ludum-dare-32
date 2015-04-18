@@ -20,16 +20,6 @@ public class Thrust : MonoBehaviour
         rigidBody.velocity = velocity;
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        Debug.Log("Collision");
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        Debug.Log("Collision");
-    }
-
     void FixedUpdate()
     {
 

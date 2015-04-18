@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5024642}
   - 60: {fileID: 6067484}
   - 114: {fileID: 11467074}
+  - 114: {fileID: 11447474}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -78,6 +79,18 @@ PolygonCollider2D:
       - {x: -.180000007, y: -.430000007}
       - {x: -.0700000003, y: -.5}
       - {x: .0700000003, y: -.49000001}
+--- !u!114 &11447474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d999c295b655485448505b31f778fb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionPref: {fileID: 180874, guid: 84eacc5322933bb4d9a3e31eec809b42, type: 2}
 --- !u!114 &11467074
 MonoBehaviour:
   m_ObjectHideFlags: 1
