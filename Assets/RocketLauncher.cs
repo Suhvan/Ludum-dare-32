@@ -58,12 +58,7 @@ public class RocketLauncher : MonoBehaviour {
     {
         GameObject rocket = Instantiate(RocketPref, SpawnPoint.transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
         Thrust thrust = rocket.GetComponent<Thrust>();
-
-
-
         thrust.SetImpulse(RocketImpulse());
-        //Debug.Log("Pew-pew");
-        GameCore.instance.OnRocketSpawn();
     }
 
 }
