@@ -31,15 +31,40 @@ class HumanCity : MonoBehaviour
         }
     }
 
+    private float p2(float x)
+    {
+        return Mathf.Pow(x, 2);
+    }
+
+    private float p4(float x)
+    {
+        return Mathf.Pow(x, 4);
+    }
+
+    private Vector2 RocketImpulse()
+    {
+        float height = 3 + Random.value * 8;
+
+        float distance = Mathf.Abs(TargetPoint.transform.position.x - transform.position.x) - Random.value * 10;
+
+        float direction = Mathf.Sign(TargetPoint.transform.position.x - transform.position.x);
+
+        float gravity = 9.81f;
+
+        float V0y = Mathf.Sqrt(2 * gravity * height);
+        float time = V0y / gravity * 2;
+        float V0x = distance / time;
+        return new Vector2(V0x * direction, V0y);
+    }
 
     private void SpawnRocket()
     {
         GameObject rocket = Instantiate(RocketPref, SpawnPoint.transform.position, new Quaternion(0,0,0,0)) as GameObject;
         Thrust thrust = rocket.GetComponent<Thrust>();
 
+        
 
-
-        thrust.SetImpulse(new Vector2((7 + Random.value * 12) * Mathf.Sign(TargetPoint.transform.position.x - transform.position.x), 4 + Random.value * 5));
+        thrust.SetImpulse(RocketImpulse());
         //Debug.Log("Pew-pew");
         GameCore.instance.OnRocketSpawn();
     }
