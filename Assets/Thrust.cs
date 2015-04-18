@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Thrust : MonoBehaviour {
+public class Thrust : MonoBehaviour
+{
 
     Rigidbody2D rigidBody;
 
     public float thrust = 10;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.velocity = new Vector2(4, 9);
-	}
+    }
 
     void OnCollisionEnter(Collision col)
     {
@@ -25,11 +27,12 @@ public class Thrust : MonoBehaviour {
 
     void FixedUpdate()
     {
-        
+
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
 
         Vector2 moveDirection = rigidBody.velocity;
         if (moveDirection != Vector2.zero)
@@ -38,5 +41,5 @@ public class Thrust : MonoBehaviour {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-	}
+    }
 }

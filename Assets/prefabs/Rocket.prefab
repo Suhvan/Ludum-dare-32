@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 487814}
   - 212: {fileID: 21295218}
   - 50: {fileID: 5024642}
-  - 114: {fileID: 11483524}
   - 60: {fileID: 6067484}
+  - 114: {fileID: 11436556}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -78,7 +78,7 @@ PolygonCollider2D:
       - {x: -.180000007, y: -.430000007}
       - {x: -.0700000003, y: -.5}
       - {x: .0700000003, y: -.49000001}
---- !u!114 &11483524
+--- !u!114 &11436556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,10 +86,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 151900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd6a9e48b668bf498da6261e57fb63f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fa28c5872296004a88d966aebfbc4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 1000
+  rigidBody: {fileID: 5024642}
 --- !u!212 &21295218
 SpriteRenderer:
   m_ObjectHideFlags: 1
