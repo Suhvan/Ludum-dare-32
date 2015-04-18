@@ -282,11 +282,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22477032, guid: 3c3576a739af0db44b217123b599ed4b, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22477032, guid: 3c3576a739af0db44b217123b599ed4b, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22485556, guid: 3c3576a739af0db44b217123b599ed4b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -374,29 +374,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 411054593}
   m_Script: {fileID: 11500000, guid: 32fe8b2c02881a4489d002476990355b, type: 3}
---- !u!1 &512619826 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-  m_PrefabInternal: {fileID: 2021449932}
---- !u!114 &512619827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 512619826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocketSpawnCD: 2
-  RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
-  SpawnPoint: {fileID: 910288861}
-  PreRocketSpawnPref: {fileID: 910288861}
-  TargetPoint: {fileID: 1688359933}
-  MinHeight: 2
-  MaxHeight: 13
-  DistanceSpread: 5
 --- !u!1 &515314513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,28 +1090,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408324, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_Name
       value: City 1
       objectReference: {fileID: 0}
-    - target: {fileID: 499662, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -8.67000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 499662, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.90999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+    - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1688359933}
-    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+    - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: TargetPoint
       value: 
-      objectReference: {fileID: 512619826}
+      objectReference: {fileID: 910288861}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_IsPrefabParent: 0
@@ -1175,24 +1144,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408324, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+    - target: {fileID: 11467272, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 910288861}
-    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+    - target: {fileID: 11467272, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: TargetPoint
       value: 
-      objectReference: {fileID: 2136218357}
-    - target: {fileID: 499662, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.01999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 499662, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.24000001
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1688359933}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_IsPrefabParent: 0
@@ -1363,26 +1324,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!1 &2136218357 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-  m_PrefabInternal: {fileID: 1881986379}
---- !u!114 &2136218358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2136218357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocketSpawnCD: 2
-  RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
-  SpawnPoint: {fileID: 1688359933}
-  PreRocketSpawnPref: {fileID: 1688359933}
-  TargetPoint: {fileID: 910288861}
-  MinHeight: 2
-  MaxHeight: 13
-  DistanceSpread: 5

@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 408324}
   - 114: {fileID: 11407226}
+  - 114: {fileID: 11465728}
+  - 114: {fileID: 11467272}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -40,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.0900002, y: .460000008, z: 0}
+  m_LocalPosition: {x: -16.1299992, y: .460000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450338}
@@ -82,12 +84,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffaa28cad88600d4d95dcf03b261f70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11465728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   rocketSpawnCD: 2
-  rocketSpawnClock: 0
   RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
-  SpawnPoint: {fileID: 117116}
+  SpawnPoint: {fileID: 0}
   PreRocketSpawnPref: {fileID: 109016, guid: e0fdf87a2055881418e3f261d6b4086c, type: 2}
   TargetPoint: {fileID: 0}
+  MinHeight: 2
+  MaxHeight: 13
+  DistanceSpread: 5
+--- !u!114 &11467272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketSpawnCD: 2
+  RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
+  SpawnPoint: {fileID: 0}
+  PreRocketSpawnPref: {fileID: 109016, guid: e0fdf87a2055881418e3f261d6b4086c, type: 2}
+  TargetPoint: {fileID: 0}
+  MinHeight: 2
+  MaxHeight: 13
+  DistanceSpread: 5
 --- !u!212 &21244164
 SpriteRenderer:
   m_ObjectHideFlags: 1
