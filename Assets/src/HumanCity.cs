@@ -32,6 +32,7 @@ class HumanCity : MonoBehaviour
 
         thrust.SetImpulse(new Vector2((7 + Random.value * 12) * Mathf.Sign(TargetPoint.transform.position.x - transform.position.x), 4 + Random.value * 5));
         //Debug.Log("Pew-pew");
+        GameCore.instance.OnRocketSpawn();
     }
 
 
