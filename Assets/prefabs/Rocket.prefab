@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionPref: {fileID: 180874, guid: 84eacc5322933bb4d9a3e31eec809b42, type: 2}
+  armDelay: .300000012
 --- !u!114 &11467074
 MonoBehaviour:
   m_ObjectHideFlags: 1
