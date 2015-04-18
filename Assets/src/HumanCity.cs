@@ -7,19 +7,28 @@ class HumanCity : MonoBehaviour
 {
     public float rocketSpawnCD;
     public float rocketSpawnClock;
+    private bool preEffectShown = false;
 
     public GameObject RocketPref;
     public GameObject SpawnPoint;
+    public GameObject PreRocketSpawnPref;
     public GameObject TargetPoint;
 
     void Update () 
     {
         rocketSpawnClock += Time.deltaTime;
-        if (rocketSpawnClock > rocketSpawnCD)
+        if( rocketSpawnClock > rocketSpawnCD )
         {
             SpawnRocket();
             rocketSpawnClock = 0;
-        }    
+            preEffectShown = false;
+        }
+
+        if( rocketSpawnCD - rocketSpawnClock < PreRocketSpawnPref.GetComponent<ParticleSystem>().duration && !preEffectShown )
+        {
+            preEffectShown = true;
+            Instantiate( PreRocketSpawnPref, SpawnPoint.transform.position, SpawnPoint.transform.rotation );
+        }
     }
 
 
