@@ -33,7 +33,7 @@ public class Gravicapa : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 			if (ForceUp)
 			{
@@ -46,17 +46,17 @@ public class Gravicapa : MonoBehaviour {
 			}
 	}
 
-	private List<Rigidbody2D> GetRocketsInside()
-	{
-
-		//rayCollider.OverlapPoint()
-	}
-
 	private void AddForceForEachRocket(float force)
 	{
 		foreach (var elem in colliders)
 		{
-			elem.AddForce((forcePoint.transform.position - elem.transform.position) * force, ForceMode2D.Force);
+			if (elem != null)
+			{
+				var forceVector = (forcePoint.transform.position - elem.transform.position);
+				var forceVectorNormalized = forceVector.normalized;
+				//var distance = forceVector.sqrMagnitude;
+				elem.AddForce(forceVectorNormalized * force, ForceMode2D.Force);
+			}
 		}
 	}
 

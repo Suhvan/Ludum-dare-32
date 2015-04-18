@@ -33,7 +33,8 @@ namespace Assets
 
 			if (Input.GetMouseButtonDown(0))
 				gravicapa.ForceUp = true;
-			else
+
+			if (Input.GetMouseButtonUp(0))
 				gravicapa.ForceUp = false;
 
 			//Debug.DrawLine(transform.position, cursor.transform.position, Color.red);
