@@ -7,9 +7,9 @@ public class Thrust : MonoBehaviour {
 
     public float thrust = 10;
 
-	// Use this for initialization
-	void Start () {
-        rigidBody = GetComponent<Rigidbody2D>();
+	void Start () 
+	{
+        
 	}
 	
 
@@ -18,8 +18,8 @@ public class Thrust : MonoBehaviour {
         
     }
 
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
         rigidBody.AddForce(transform.forward * thrust);
 	}
 }
