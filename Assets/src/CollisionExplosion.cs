@@ -32,6 +32,12 @@ public class CollisionExplosion : MonoBehaviour {
             case "Rocket(Clone)":
                 GameCore.instance.onExplosionStack();
                 break;
+            case "UFO":
+                GameCore.instance.onUFODamaged();
+                break;
+            default:
+                GameCore.instance.OnRocketDisabled();
+                break;
 
         }
         

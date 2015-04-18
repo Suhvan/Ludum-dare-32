@@ -7,6 +7,8 @@ using UnityEngine;
 
 class GameCore : MonoBehaviour
 {
+
+    public int looserScore = -100;
 	private static GameCore m_intance;
     public static GameCore instance
     {
@@ -24,11 +26,29 @@ class GameCore : MonoBehaviour
 	private float m_stamina = 1.0f;
 	public float stamina { get { return m_stamina; } set { m_stamina = Mathf.Clamp01(value); } }
 
-    public int score = 0;
+    private int _score;
+    public int score 
+    { 
+        get {return _score;} 
+        set 
+        {
+            _score = value;
+            if (_score < looserScore)
+            {
+                Time.timeScale = 0;
+            }
+        } 
+    }
 
-    public void OnRocketSpawn()
+    public void OnRocketDisabled()
     {
         score++;
+    }
+
+    public void onUFODamaged()
+    {
+        score -= 5;
+        stamina = 0;
     }
 
     public void onCityDamaged()
