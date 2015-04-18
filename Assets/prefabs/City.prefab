@@ -94,13 +94,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketSpawnCD: 2
+  rocketSpawnCD: 1
   RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
   SpawnPoint: {fileID: 0}
   PreRocketSpawnPref: {fileID: 109016, guid: e0fdf87a2055881418e3f261d6b4086c, type: 2}
   TargetPoint: {fileID: 0}
-  MinHeight: 2
-  MaxHeight: 13
+  MinHeight: .5
+  MaxHeight: .5
   DistanceSpread: 5
 --- !u!212 &21244164
 SpriteRenderer:
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c0861e15b78271498cc5e8a00097056, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58de5f0ae1777264b8abbd857bee84df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
