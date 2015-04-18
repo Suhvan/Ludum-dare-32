@@ -10,7 +10,7 @@ class HumanCity : MonoBehaviour
     public float rocketSpawnClock;
 
     public GameObject RocketPref;
-    public GameObject SpawnPoint;   
+    public GameObject SpawnPoint;
 
     void Update () 
     {
