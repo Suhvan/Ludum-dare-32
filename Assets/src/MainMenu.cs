@@ -11,5 +11,10 @@ class MainMenu : MonoBehaviour
     {
         Application.LoadLevel(1);
     }
+
+    public void onExit()
+    {
+        Application.Quit();
+    }
 }
 

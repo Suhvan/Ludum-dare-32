@@ -23,7 +23,7 @@ public class CollisionExplosion : MonoBehaviour {
         if (armDelay + spawnTime > Time.time)
             return;
 
-        Debug.Log( string.Format( "Collision with {0}", col.collider.gameObject.name ) );
+     
         switch(col.collider.gameObject.name)
         {
             case "Houses":
@@ -37,6 +37,7 @@ public class CollisionExplosion : MonoBehaviour {
                 break;
             default:
                 GameCore.instance.OnRocketDisabled();
+                Debug.Log(string.Format("Collision with {0}", col.collider.gameObject.name));
                 break;
 
         }
