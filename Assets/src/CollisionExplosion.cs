@@ -27,7 +27,7 @@ public class CollisionExplosion : MonoBehaviour {
         switch(col.collider.gameObject.name)
         {
             case "Houses":
-                GameCore.instance.onCityDamaged();
+                GameCore.instance.onCityDamaged(col.collider.gameObject);
                 break;
             case "Rocket(Clone)":
                 GameCore.instance.onExplosionStack();
