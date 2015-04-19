@@ -246,6 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5105be6c29384304fbea2920c58966c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 19899566}
+  gpPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11470346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,6 +282,7 @@ MonoBehaviour:
   forcePoint: {fileID: 142382}
   rayCollider: {fileID: 0}
   pickUpSpeed: 10
+  fixHeight: {fileID: 11407706}
 --- !u!114 &11495290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1631,7 +1634,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
+    type: 12
     radius: 1
     angle: 25
     length: 5
@@ -1646,7 +1649,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 10
+      scalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1688,19 +1691,19 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .17567575
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: 1
-          value: 1
+        - time: .992687404
+          value: .121621728
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2482,7 +2485,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afb7bb47b8e9a1a4591b365de087e9ac, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
