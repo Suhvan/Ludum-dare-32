@@ -467,7 +467,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!1 &754882906
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,22 +997,12 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 122686, guid: 8959bd3ad3f0a3047a3c45d44cf01afe, type: 2}
   m_PrefabInternal: {fileID: 1880898001}
---- !u!1 &1443645482 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 128530, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
-  m_PrefabInternal: {fileID: 1555418021}
---- !u!114 &1443645483
+--- !u!114 &1443645484 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1443645482}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475148, guid: 770b70138dd9e324e9411c84aa1bf715,
+    type: 2}
+  m_PrefabInternal: {fileID: 1555418021}
   m_Script: {fileID: 11500000, guid: 36c8394443638894cad14e5998de4169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  altLimit: 10
 --- !u!1001 &1491168013
 Prefab:
   m_ObjectHideFlags: 0
@@ -1050,12 +1040,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433208, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11470346, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
       propertyPath: cursor
       value: 
-      objectReference: {fileID: 1443645483}
+      objectReference: {fileID: 1443645484}
+    - target: {fileID: 12092630, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
   m_IsPrefabParent: 0
@@ -1131,7 +1125,7 @@ Transform:
   - {fileID: 1232908347}
   - {fileID: 754882907}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &1555418021
 Prefab:
   m_ObjectHideFlags: 0
@@ -1169,9 +1163,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 457472, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 21255608, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1593761485 stripped
@@ -1492,58 +1487,4 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
---- !u!1 &2089826966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2089826968}
-  - 212: {fileID: 2089826967}
-  m_Layer: 0
-  m_Name: Back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &2089826967
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2089826966}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eda0547e065c2b241a375f9d2a5035e8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &2089826968
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2089826966}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.23000002, y: 5.80000019, z: 2.95000005}
-  m_LocalScale: {x: 267.110535, y: 135.494751, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 17
