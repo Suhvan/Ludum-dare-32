@@ -16,6 +16,9 @@ public class Gravicapa : MonoBehaviour {
     [SerializeField]
     private float pickUpSpeed;
 
+	[SerializeField]
+	private FixHeight fixHeight;
+
     // Use this for initialization
 	void Start () {
 		
@@ -40,6 +43,8 @@ public class Gravicapa : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
+			fixHeight.gpPosition = forcePoint.transform.position;
+
 			if (ForceUp && GameCore.instance.stamina > 0)
 			{
 				AddForceForEachRocket(forceValue);
