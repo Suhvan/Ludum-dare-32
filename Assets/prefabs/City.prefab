@@ -108,7 +108,7 @@ GameObject:
   - 4: {fileID: 450338}
   - 212: {fileID: 21244164}
   - 60: {fileID: 6085542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
