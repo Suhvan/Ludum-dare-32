@@ -11,7 +11,7 @@ public class Human : MonoBehaviour {
 
     private bool isCaptured;
 
-    public float DeadSpeed = 30;
+    public float DeadSpeed = 120;
 
     private float prevSpeed = 0;
 

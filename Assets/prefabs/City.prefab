@@ -74,7 +74,6 @@ GameObject:
   - 4: {fileID: 408324}
   - 114: {fileID: 11407226}
   - 114: {fileID: 11465728}
-  - 114: {fileID: 11497266}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -108,7 +107,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450338}
   - 212: {fileID: 21244164}
-  - 61: {fileID: 6138058}
+  - 60: {fileID: 6085542}
   m_Layer: 0
   m_Name: Houses
   m_TagString: Untagged
@@ -322,8 +321,8 @@ Transform:
   - {fileID: 442418}
   m_Father: {fileID: 408324}
   m_RootOrder: 1
---- !u!61 &6138058
-BoxCollider2D:
+--- !u!60 &6085542
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -332,9 +331,19 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.107041359, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 4.85940456, y: 4}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 1.62, y: .574999988}
+      - {x: 1.52999997, y: 1.98500001}
+      - {x: -.810000002, y: 1.98500001}
+      - {x: -1.89999998, y: 1.85500002}
+      - {x: -2.41000009, y: 1.28499997}
+      - {x: -3.08999991, y: -.595000029}
+      - {x: -3.08999991, y: -1.98500001}
+      - {x: 3.20000005, y: -1.98500001}
+      - {x: 3.20000005, y: -.435000002}
+      - {x: 2.6500001, y: .564999998}
 --- !u!114 &11407226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,23 +399,6 @@ MonoBehaviour:
   MinHeight: 2
   MaxHeight: 13
   DistanceSpread: 10
---- !u!114 &11497266
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e602a121040fee348a1aa3f407ef4000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HumanPref: {fileID: 148204, guid: b953378c55a8f08438b922da2d360965, type: 2}
-  SpawnPoint: {fileID: 163112}
-  DestinationPoint: {fileID: 0}
-  SpawnCooldown: 5
-  SpawnDelay: 0
-  DestinationSpread: 0
 --- !u!212 &21213410
 SpriteRenderer:
   m_ObjectHideFlags: 1
