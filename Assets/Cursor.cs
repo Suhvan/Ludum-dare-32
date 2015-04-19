@@ -28,13 +28,15 @@ namespace Assets
 			};
 		}
 
+		public Vector3 clampedMouse { get; set; }
+
 		void Update()
 		{
 			if (GameCore.instance.onPause)
 				return;
 
 			var mousePos = Input.mousePosition;
-			var clampedMouse = new Vector3(Mathf.Clamp(mousePos.x, rect.left, rect.right), Mathf.Clamp(mousePos.y, rect.bottom, rect.top), mousePos.z);
+			clampedMouse = new Vector3(Mathf.Clamp(mousePos.x, rect.left, rect.right), Mathf.Clamp(mousePos.y, rect.bottom, rect.top), mousePos.z);
 
             //Debug.Log(mousePos.y);
 
