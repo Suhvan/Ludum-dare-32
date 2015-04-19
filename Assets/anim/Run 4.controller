@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -26,7 +26,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_MultiThreadedStateMachine: 1
 --- !u!1101 &110108578
 AnimatorStateTransition:
@@ -223,23 +223,6 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: 6d36b43cc728ddb4e97120d74d90b2ed, type: 2}
   m_Tag: 
---- !u!1102 &110299622
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: HumanRunUp
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: b5e725306207182408695ddc6681e044, type: 2}
-  m_Tag: 
 --- !u!1107 &110790532
 AnimatorStateMachine:
   serializedVersion: 5
@@ -254,9 +237,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110273640}
     m_Position: {x: 324, y: 276, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110299622}
-    m_Position: {x: 396, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110207636}
     m_Position: {x: 624, y: 180, z: 0}
