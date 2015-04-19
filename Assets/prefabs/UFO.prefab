@@ -68,6 +68,7 @@ GameObject:
   - 114: {fileID: 11487036}
   - 212: {fileID: 21294468}
   - 60: {fileID: 6042752}
+  - 82: {fileID: 8284842}
   m_Layer: 8
   m_Name: Gravizapa
   m_TagString: Untagged
@@ -218,6 +219,75 @@ PolygonCollider2D:
       - {x: -.0799999982, y: -.0799999982}
       - {x: .0799999982, y: -.0799999982}
       - {x: .0799999982, y: .0799999982}
+--- !u!82 &8284842
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137872}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a6c884040912f12429ec60dfaf04ed89, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .349999994
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9521892
 Animator:
   serializedVersion: 3
@@ -264,8 +334,6 @@ MonoBehaviour:
   lr: {fileID: 12092630}
   forceScale: .150000006
   gravicapa: {fileID: 11487036}
-  staminaReduceValue: .5
-  staminaIncreaseValue: .600000024
   pukan: {fileID: 11495290}
 --- !u!114 &11487036
 MonoBehaviour:
@@ -284,7 +352,10 @@ MonoBehaviour:
   pickUpSpeed: 10
   fixHeight: {fileID: 11407706}
   spriteRenderer: {fileID: 21294468}
-  activeColor: {r: .235294119, g: .701960802, b: .235294119, a: .635294139}
+  activeColor: {r: 0, g: 1, b: .131034613, a: .529411793}
+  audioSource: {fileID: 8284842}
+  staminaReduceValue: .400000006
+  staminaIncreaseValue: .5
 --- !u!114 &11495290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1768,7 +1839,7 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4279500544
         key1:
           serializedVersion: 2
           rgba: 16777215

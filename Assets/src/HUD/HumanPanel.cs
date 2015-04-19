@@ -23,17 +23,46 @@ class HumanPanel : MonoBehaviour
     { 
         get 
         {
-            if (humanIcons.Count == humanStats.Count)
+            return checkAllState(false);
+        } 
+    }
+
+    public int survivalCount
+    {
+        get
+        {
+            return humanStats.Count(x => x == true);
+        }
+    }
+
+    public int totalCount
+    {
+        get
+        {
+            return humanIcons.Count;
+        }
+    }
+
+    public bool allSurvive
+    {
+        get
+        {
+            return checkAllState(false);
+        }
+    }
+
+    private bool checkAllState(bool state2Check)
+    {
+        if (humanIcons.Count == humanStats.Count)
+        {
+            foreach (var survived in humanStats)
             {
-                foreach (var survived in humanStats)
-                {
-                    if (survived)
-                        return false;
-                }
-                return true;
+                if (survived != state2Check)
+                    return false;
             }
-            return false;
-    } 
+            return true;
+        }
+        return false;
     }
 
     void Update()

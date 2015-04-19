@@ -19,12 +19,6 @@ namespace Assets
 		[SerializeField]
 		Gravicapa gravicapa;
 
-		[SerializeField]
-		private float staminaReduceValue;
-
-		[SerializeField]
-		private float staminaIncreaseValue;
-
         [SerializeField]
         PukingPower pukan;
 
@@ -37,13 +31,6 @@ namespace Assets
 		{
 			if (GameCore.instance.onPause)
 				return;
-
-			if (gravicapa.ForceUp)
-			{
-				GameCore.instance.stamina -= Time.deltaTime * staminaReduceValue;
-			}
-			else
-				GameCore.instance.stamina += Time.deltaTime * staminaIncreaseValue;
 
 
 			lr.SetPosition(0, transform.position);

@@ -28,20 +28,20 @@ public class CollisionExplosion : MonoBehaviour {
         {
             case "Houses":
                 GameCore.instance.onCityDamaged(col.collider.gameObject);
-                break;
-            case "Rocket(Clone)":
-                GameCore.instance.onExplosionStack();
-                break;
+                break;                
             case "UFO":
                 GameCore.instance.onUFODamaged();
                 break;
+            case "Human(Clone)":
+                break;
+            case "Rocket(Clone)":
             default:
                 GameCore.instance.OnRocketDisabled();
-                Debug.Log(string.Format("Collision with {0}", col.collider.gameObject.name));
                 break;
 
         }
         
+
         Explode( col.contacts[ 0 ].point );
         Destroy( gameObject );
     }
