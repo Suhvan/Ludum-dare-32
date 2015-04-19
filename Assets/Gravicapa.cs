@@ -25,6 +25,9 @@ public class Gravicapa : MonoBehaviour {
 	[SerializeField]
 	private Color activeColor;
 
+	[SerializeField]
+	private AudioSource audioSource;
+
 	private Color defaultColor;
 
     // Use this for initialization
@@ -51,6 +54,7 @@ public class Gravicapa : MonoBehaviour {
 				tweenParams.Add("time", 0.3f);
 				tweenParams.Add("onupdate", "OnColorUpdated");
 				iTween.ValueTo(gameObject, tweenParams);
+				audioSource.Play();
 			}
 			else
 			{
@@ -62,6 +66,7 @@ public class Gravicapa : MonoBehaviour {
 				tweenParams.Add("time", 0.1f);
 				tweenParams.Add("onupdate", "OnColorUpdated");
 				iTween.ValueTo(gameObject, tweenParams);
+				audioSource.Stop();
 			}
 		}
 	}

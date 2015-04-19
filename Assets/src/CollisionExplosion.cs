@@ -42,6 +42,7 @@ public class CollisionExplosion : MonoBehaviour {
 
         }
         
+
         Explode( col.contacts[ 0 ].point );
         Destroy( gameObject );
     }
