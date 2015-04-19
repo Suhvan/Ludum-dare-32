@@ -7,7 +7,32 @@ public class Human : MonoBehaviour {
 
     GameObject destinationPoint;
 
-    Rigidbody2D rigidBody;
+    public GameObject parent;
+
+    public Rigidbody2D rigidBody;
+
+    private bool isCaptured;
+
+    public bool IsCaptured
+    {
+        get
+        {
+            return isCaptured;
+        }
+        set
+        {
+            isCaptured = value;
+            //rigidBody.isKinematic = isCaptured;
+        }
+    }
+
+    public bool IsFalling
+    {
+        get
+        {
+            return rigidBody.velocity.y < -0.1f;
+        }
+    }
 
     void Awake()
     {
@@ -26,6 +51,10 @@ public class Human : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        rigidBody.velocity = new Vector2(walkSpeed * Mathf.Sign(destinationPoint.transform.position.x - transform.position.x), rigidBody.velocity.y);
+        if (!(IsCaptured || IsFalling))
+        {
+            //rigidBody.velocity = new Vector2(walkSpeed * Mathf.Sign(destinationPoint.transform.position.x - transform.position.x), rigidBody.velocity.y);
+            rigidBody.AddForce(new Vector2(walkSpeed * Mathf.Sign(destinationPoint.transform.position.x - transform.position.x), rigidBody.velocity.y));
+        }
 	}
 }

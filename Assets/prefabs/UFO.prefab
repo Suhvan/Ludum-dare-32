@@ -219,6 +219,7 @@ MonoBehaviour:
   forceValue: 100
   forcePoint: {fileID: 142382}
   rayCollider: {fileID: 0}
+  pickUpSpeed: 10
 --- !u!114 &11495290
 MonoBehaviour:
   m_ObjectHideFlags: 1

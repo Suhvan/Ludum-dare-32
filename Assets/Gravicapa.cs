@@ -43,11 +43,12 @@ public class Gravicapa : MonoBehaviour {
 			if (ForceUp && GameCore.instance.stamina > 0)
 			{
 				AddForceForEachRocket(forceValue);
+                PickUpAllPeople();
 			}
 
 			if (ForceDown)
 			{
-
+                
 			}
 	}
 
@@ -65,14 +66,14 @@ public class Gravicapa : MonoBehaviour {
 		}
 	}
 
-    private void PickUpAllPeople(float force)
+    private void PickUpAllPeople()
     {
         foreach (var elem in people)
         {
             if (elem != null)
             {
-                elem.transform.position.Set(forcePoint.transform.position.x, elem.transform.position.y, elem.transform.position.z);
-                elem.velocity.Set(0, pickUpSpeed);
+                elem.transform.position = new Vector3(forcePoint.transform.position.x, elem.transform.position.y, elem.transform.position.z);
+                elem.velocity = new Vector2(0, pickUpSpeed);
             }
         }
     }
@@ -85,6 +86,7 @@ public class Gravicapa : MonoBehaviour {
 		}
         if (other.gameObject.GetComponent<Human>() != null)
         {
+            other.gameObject.GetComponent<Human>().IsCaptured = true;
             people.Add(other.GetComponent<Rigidbody2D>());
         }
     }
@@ -97,6 +99,7 @@ public class Gravicapa : MonoBehaviour {
 		}
         if (other.gameObject.GetComponent<Human>() != null)
         {
+            other.gameObject.GetComponent<Human>().IsCaptured = false;
             people.Remove(other.GetComponent<Rigidbody2D>());
         }
     }
