@@ -19,19 +19,56 @@ public class Gravicapa : MonoBehaviour {
 	[SerializeField]
 	private FixHeight fixHeight;
 
+	[SerializeField]
+	private SpriteRenderer spriteRenderer;
+
+	[SerializeField]
+	private Color activeColor;
+
+	private Color defaultColor;
+
     // Use this for initialization
 	void Start () {
-		
+		defaultColor = spriteRenderer.color;
 	}
 
 	private List<Rigidbody2D> colliders = new List<Rigidbody2D>();
 
     private List<Rigidbody2D> people = new List<Rigidbody2D>();
 
+	private bool m_ForceUp;
 	public bool ForceUp
 	{
-		get;
-		set;
+		get { return m_ForceUp; }
+		set 
+		{ 
+			m_ForceUp = value; 
+			if (value)
+			{
+				Hashtable tweenParams = new Hashtable();
+				tweenParams.Add("from", spriteRenderer.color);
+				tweenParams.Add("to", activeColor);
+				tweenParams.Add("time", 0.3f);
+				tweenParams.Add("onupdate", "OnColorUpdated");
+				iTween.ValueTo(gameObject, tweenParams);
+			}
+			else
+			{
+				iTween.Stop(gameObject);
+
+				Hashtable tweenParams = new Hashtable();
+				tweenParams.Add("from", spriteRenderer.color);
+				tweenParams.Add("to", defaultColor);
+				tweenParams.Add("time", 0.1f);
+				tweenParams.Add("onupdate", "OnColorUpdated");
+				iTween.ValueTo(gameObject, tweenParams);
+			}
+		}
+	}
+
+	private void OnColorUpdated(Color color)
+	{
+		spriteRenderer.color = color;
 	}
 
 	public bool ForceDown
@@ -45,8 +82,11 @@ public class Gravicapa : MonoBehaviour {
 	{
 			fixHeight.gpPosition = forcePoint.transform.position;
 
+			fixHeight.gameObject.SetActive(ForceUp);
+
 			if (ForceUp && GameCore.instance.stamina > 0)
 			{
+				
 				AddForceForEachRocket(forceValue);
                 PickUpAllPeople();
 			}
