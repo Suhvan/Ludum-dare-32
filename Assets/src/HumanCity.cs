@@ -5,6 +5,6 @@ using UnityEngine;
 
 class HumanCity : MonoBehaviour
 {
-
+    public HumanPanel humans;
 
 }
