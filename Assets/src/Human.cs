@@ -5,6 +5,8 @@ public class Human : MonoBehaviour {
 
     public float walkSpeed = 5;
 
+    public GameObject ExplosionPref;
+
     GameObject destinationPoint;
 
     public Rigidbody2D rigidBody;
@@ -62,8 +64,7 @@ public class Human : MonoBehaviour {
         if (Mathf.Abs(prevSpeed - speed) > DeadSpeed && !isCaptured)
         {
             Debug.LogWarning("Human died crashed " + Mathf.Abs(prevSpeed - speed));
-            GameCore.instance.onHumanDied(gameObject);
-            Destroy(gameObject);
+            Die(transform.position);          
         }
         prevSpeed = speed;
 	}
@@ -72,9 +73,8 @@ public class Human : MonoBehaviour {
     {
         switch (col.collider.gameObject.name)
         {
-            case "Rocket(Clone)":
-                GameCore.instance.onHumanDied(gameObject);
-                Destroy(gameObject);
+            case "Rocket(Clone)":                
+                Die(col.contacts[0].point);                
                 break;
             case "UFO":
                 GameCore.instance.onHumanSaved(gameObject);
@@ -83,8 +83,7 @@ public class Human : MonoBehaviour {
             case "Ground":
                 if (rigidBody.velocity.sqrMagnitude > DeadSpeed)
                 {
-                    GameCore.instance.onHumanDied(gameObject);
-                    Destroy(gameObject);
+                    Die(col.contacts[0].point);
                 }
                 break;
             default:
@@ -92,6 +91,13 @@ public class Human : MonoBehaviour {
                 break;
 
         }
+    }
+
+    void Die(Vector2 pos)
+    {
+        GameCore.instance.onHumanDied(gameObject);
+        Instantiate(ExplosionPref, pos, new Quaternion(0, 0, 0, 0));
+        Destroy(gameObject);
     }
 }
 
