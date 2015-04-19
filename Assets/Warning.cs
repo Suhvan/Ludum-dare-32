@@ -67,6 +67,7 @@ public class Warning : MonoBehaviour {
             default:
                 break;
         }
+        gameObject.GetComponent<AudioSource>().Play();
     }
 
 	// Update is called once per frame
