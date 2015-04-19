@@ -31,6 +31,7 @@ GameObject:
   - 114: {fileID: 11470346}
   - 120: {fileID: 12092630}
   - 60: {fileID: 6012302}
+  - 95: {fileID: 9521892}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -217,6 +218,23 @@ PolygonCollider2D:
       - {x: -.0799999982, y: -.0799999982}
       - {x: .0799999982, y: -.0799999982}
       - {x: .0799999982, y: .0799999982}
+--- !u!95 &9521892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8385d64ff441e2f42ac08c438241596e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11407706
 MonoBehaviour:
   m_ObjectHideFlags: 1
