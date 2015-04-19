@@ -276,7 +276,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433866, guid: 0e980131671bfc14185e2d9752f7cb48, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e980131671bfc14185e2d9752f7cb48, type: 2}
@@ -364,7 +364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &754882906
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &970688392
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +647,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441098, guid: 2d99d717f18cb5c43a73457742b48885, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d99d717f18cb5c43a73457742b48885, type: 2}
@@ -689,11 +689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474598, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 173702, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
-      propertyPath: m_Name
-      value: HumanSpawn 1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11408336, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
       propertyPath: City
@@ -703,6 +699,10 @@ Prefab:
       propertyPath: DestinationPoint
       value: 
       objectReference: {fileID: 65137367}
+    - target: {fileID: 173702, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
+      propertyPath: m_Name
+      value: HumanSpawn 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
   m_IsPrefabParent: 0
@@ -847,7 +847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433208, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11470346, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
       propertyPath: cursor
@@ -886,7 +886,7 @@ Transform:
   - {fileID: 1232908347}
   - {fileID: 754882907}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &1555418021
 Prefab:
   m_ObjectHideFlags: 0
@@ -924,7 +924,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 457472, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
@@ -1001,7 +1001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408324, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: HumanSpawnPoint
@@ -1067,7 +1067,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22489664, guid: dce8d350110217d44a0370422e73b86a, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22489664, guid: dce8d350110217d44a0370422e73b86a, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1111,11 +1111,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22427820, guid: dce8d350110217d44a0370422e73b86a, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22427820, guid: dce8d350110217d44a0370422e73b86a, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dce8d350110217d44a0370422e73b86a, type: 2}
@@ -1157,7 +1157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408324, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: HumanSpawnPoint

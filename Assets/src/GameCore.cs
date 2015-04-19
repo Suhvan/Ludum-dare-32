@@ -59,16 +59,23 @@ class GameCore : MonoBehaviour
         set 
         {
             _score = value;
-            if (_score < looserScore || _score > winnerScore)
-            {
-                gameOver = true;
-            }
         } 
     } 
 
-    public bool Victorious 
+    public bool TotalLoss 
     {
-        get { return _score > winnerScore; }
+        get 
+        {
+            return leftCity.humans.allDead || rightCity.humans.allDead;
+        }
+    }
+
+    public bool TotalWin
+    {
+        get
+        {
+            return leftCity.humans.allSurvive || rightCity.humans.allSurvive;
+        }
     }
 
     public void OnRocketDisabled()
@@ -78,7 +85,6 @@ class GameCore : MonoBehaviour
 
     public void onUFODamaged()
     {
-        score -= 5;
         stamina = 0;
     }
 
@@ -120,7 +126,6 @@ class GameCore : MonoBehaviour
             city.HumanSpawnPoint.GetComponent<HumanSpawn>().OnDamaged();
             AddDeadBody(city);
         }
-        score -= 10;
     }
 
     private void CheckGameover()
@@ -130,7 +135,7 @@ class GameCore : MonoBehaviour
 
     public void onExplosionStack()
     {
-        score += 3;
+        score += 2;
     }
 
     
