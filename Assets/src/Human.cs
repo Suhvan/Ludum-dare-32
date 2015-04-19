@@ -3,6 +3,28 @@ using System.Collections;
 
 public class Human : MonoBehaviour {
 
+    private enum AnimatorState 
+    {
+        RIGTH=0,
+        LEFT=1,
+        VERTICAL=2,
+        STAND=3
+    }
+    private AnimatorState _state;
+    private AnimatorState state 
+    {
+        set
+        {
+            if (_state != value)
+            {
+                _state = value;
+                anim.SetInteger("State", (int)_state);
+            }
+        }
+    }
+
+    public Animator anim;
+
     public float walkSpeed = 5;
 
     public GameObject ExplosionPref;
@@ -41,6 +63,7 @@ public class Human : MonoBehaviour {
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     public void SetDestination(GameObject destinationPoint)
@@ -58,8 +81,22 @@ public class Human : MonoBehaviour {
         if (!(IsCaptured || IsFalling))
         {
             //rigidBody.velocity = new Vector2(walkSpeed * Mathf.Sign(destinationPoint.transform.position.x - transform.position.x), rigidBody.velocity.y);
-            rigidBody.AddForce(new Vector2(walkSpeed * Mathf.Sign(destinationPoint.transform.position.x - transform.position.x), rigidBody.velocity.y));
+            var sign = Mathf.Sign(destinationPoint.transform.position.x - transform.position.x);
+            if(sign>0)
+            {
+                state = AnimatorState.RIGTH;
+            }
+            else
+            {
+                state = AnimatorState.LEFT;
+            }
+            rigidBody.AddForce(new Vector2(walkSpeed * sign, rigidBody.velocity.y));
         }
+        else
+        {
+            state = AnimatorState.VERTICAL;
+        }
+
         float speed = rigidBody.velocity.sqrMagnitude;
         if (Mathf.Abs(prevSpeed - speed) > DeadSpeed && !isCaptured)
         {
