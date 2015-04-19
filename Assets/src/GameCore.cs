@@ -115,7 +115,11 @@ class GameCore : MonoBehaviour
     public void onCityDamaged(GameObject cityHouses )
     {
         var city = cityHouses.GetComponentInParent<HumanCity>();
-        AddDeadBody(city);
+        if (city.HumanSpawnPoint.GetComponent<HumanSpawn>().CountUnspawned() > 0)
+        {
+            city.HumanSpawnPoint.GetComponent<HumanSpawn>().OnDamaged();
+            AddDeadBody(city);
+        }
         score -= 10;
     }
 

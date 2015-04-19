@@ -80,8 +80,14 @@ public class Human : MonoBehaviour {
                 GameCore.instance.onHumanSaved(gameObject);
                 Destroy(gameObject);
                 break;
+            case "Ground":
+                if (rigidBody.velocity.sqrMagnitude > DeadSpeed)
+                {
+                    GameCore.instance.onHumanDied(gameObject);
+                    Destroy(gameObject);
+                }
+                break;
             default:
-                GameCore.instance.OnRocketDisabled();
                 Debug.Log(string.Format("Collision with {0}", col.collider.gameObject.name));
                 break;
 

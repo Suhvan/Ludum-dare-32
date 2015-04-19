@@ -600,13 +600,13 @@ Prefab:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11408336, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
-      propertyPath: DestinationPoint
-      value: 
-      objectReference: {fileID: 65137367}
-    - target: {fileID: 11408336, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
       propertyPath: City
       value: 
       objectReference: {fileID: 7180834}
+    - target: {fileID: 11408336, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
+      propertyPath: DestinationPoint
+      value: 
+      objectReference: {fileID: 65137367}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
   m_IsPrefabParent: 0
@@ -929,6 +929,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 770b70138dd9e324e9411c84aa1bf715, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1593761485 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173702, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
+  m_PrefabInternal: {fileID: 1037692923}
 --- !u!1 &1688359933
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +960,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &1696530109 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173702, guid: 4029728168e38454fbc5e24a9b5f61e9, type: 2}
+  m_PrefabInternal: {fileID: 1182863803}
 --- !u!1001 &1881986379
 Prefab:
   m_ObjectHideFlags: 0
@@ -995,12 +1003,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: HumanSpawnPoint
+      value: 
+      objectReference: {fileID: 1696530109}
     - target: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_Name
       value: City 1
       objectReference: {fileID: 0}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: SpawnPoint
+      propertyPath: RocketSpawnPoint
       value: 
       objectReference: {fileID: 1688359933}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
@@ -1011,10 +1023,10 @@ Prefab:
       propertyPath: UFO
       value: 
       objectReference: {fileID: 65137367}
-    - target: {fileID: 0}
-      propertyPath: DestinationPoint
-      value: 
-      objectReference: {fileID: 65137367}
+    - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
   m_IsPrefabParent: 0
@@ -1147,8 +1159,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11407226, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: HumanSpawnPoint
+      value: 
+      objectReference: {fileID: 1593761485}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: SpawnPoint
+      propertyPath: RocketSpawnPoint
       value: 
       objectReference: {fileID: 910288861}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}

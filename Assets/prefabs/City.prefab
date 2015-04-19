@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   humans: {fileID: 11420774}
+  HumanSpawnPoint: {fileID: 0}
 --- !u!114 &11420774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,11 +388,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497ec1ec5ef09134b8e22d2ca6f33ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketSpawnCD: 1
+  rocketSpawnCD: 4
   rocketSpawnClock: 0
   gravitySpread: 2
   RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
-  SpawnPoint: {fileID: 0}
+  RocketSpawnPoint: {fileID: 0}
   PreRocketSpawnPref: {fileID: 109016, guid: e0fdf87a2055881418e3f261d6b4086c, type: 2}
   TargetPoint: {fileID: 0}
   UFO: {fileID: 0}

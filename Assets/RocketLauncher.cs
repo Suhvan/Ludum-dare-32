@@ -9,7 +9,7 @@ public class RocketLauncher : MonoBehaviour {
     private bool preEffectShown = false;
 
     public GameObject RocketPref;
-    public GameObject SpawnPoint;
+    public GameObject RocketSpawnPoint;
     public GameObject PreRocketSpawnPref;
     public GameObject TargetPoint;
     public GameObject UFO;
@@ -34,15 +34,17 @@ public class RocketLauncher : MonoBehaviour {
         if (rocketSpawnCD - rocketSpawnClock < PreRocketSpawnPref.GetComponent<ParticleSystem>().duration && !preEffectShown)
         {
             preEffectShown = true;
-            Instantiate(PreRocketSpawnPref, SpawnPoint.transform.position, SpawnPoint.transform.rotation);
+            Instantiate(PreRocketSpawnPref, RocketSpawnPoint.transform.position, RocketSpawnPoint.transform.rotation);
         }
+
+
     }
 
     private Vector2 RocketImpulse(Thrust tr, Vector2 targetPos, float DistanceSpread = 0, float MinHeight = 0, float MaxHeight = 0)
     {
 
         //Vector2 targetPos = TargetPoint.transform.position;
-        Vector2 startPos = SpawnPoint.transform.position;
+        Vector2 startPos = RocketSpawnPoint.transform.position;
 
         float absoluteHeight = Mathf.Abs(MinHeight + Random.value * (MaxHeight - MinHeight)) + Mathf.Min(startPos.y, targetPos.y);
         float dx = targetPos.x - startPos.x;
@@ -65,7 +67,7 @@ public class RocketLauncher : MonoBehaviour {
 
     private void SpawnRocket()
     {
-        GameObject rocket = Instantiate(RocketPref, SpawnPoint.transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
+        GameObject rocket = Instantiate(RocketPref, RocketSpawnPoint.transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
         Thrust thrust = rocket.GetComponent<Thrust>();
         thrust.rigidBody.gravityScale = Random.value * gravitySpread + 1;
 

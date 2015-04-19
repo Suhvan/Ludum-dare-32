@@ -7,4 +7,6 @@ class HumanCity : MonoBehaviour
 {
     public HumanPanel humans;
 
+    public GameObject HumanSpawnPoint;
+
 }

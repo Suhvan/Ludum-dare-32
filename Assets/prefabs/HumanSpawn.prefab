@@ -42,7 +42,7 @@ MonoBehaviour:
   HumanPref: {fileID: 148204, guid: b953378c55a8f08438b922da2d360965, type: 2}
   City: {fileID: 0}
   DestinationPoint: {fileID: 0}
-  SpawnLimit: 10
+  SpawnLimit: 8
   SpawnCooldown: 5
   SpawnDelay: 0
   DestinationSpread: 0
