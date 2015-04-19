@@ -110,11 +110,8 @@ class GameCore : MonoBehaviour
             {
                 gameOver = true;
             }
-        }
-        else
-        {
-            CheckGameover();
-        }
+        }       
+        CheckGameover();       
     }
     
 

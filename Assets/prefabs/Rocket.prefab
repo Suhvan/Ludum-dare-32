@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11467074}
   - 114: {fileID: 11447474}
   - 60: {fileID: 6038826}
+  - 82: {fileID: 8281360}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -95,6 +96,75 @@ PolygonCollider2D:
       - {x: .135000005, y: -.970000029}
       - {x: .234999999, y: -.819999993}
       - {x: .314999998, y: -.769999981}
+--- !u!82 &8281360
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151900}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7dd40f7412b5127479ea0607f7668279, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11447474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionPref: {fileID: 180874, guid: 84eacc5322933bb4d9a3e31eec809b42, type: 2}
+  audioSource: {fileID: 8281360}
   armDelay: .300000012
 --- !u!114 &11467074
 MonoBehaviour:
@@ -119,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd6a9e48b668bf498da6261e57fb63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidBody: {fileID: 0}
   thrust: 10
 --- !u!212 &21295218
 SpriteRenderer:
