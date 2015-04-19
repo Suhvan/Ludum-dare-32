@@ -37,7 +37,6 @@ public class CollisionExplosion : MonoBehaviour {
             case "Rocket(Clone)":
             default:
                 GameCore.instance.OnRocketDisabled();
-                Debug.Log(string.Format("Collision with {0}", col.collider.gameObject.name));
                 break;
 
         }
