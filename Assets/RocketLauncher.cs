@@ -37,10 +37,15 @@ public class RocketLauncher : MonoBehaviour {
     private Vector2 RocketImpulse()
     {
 
+        Vector2 targetPos = TargetPoint.transform.position;
+        Vector2 startPos = SpawnPoint.transform.position;
 
-        float height = Mathf.Abs(MinHeight + Random.value * (MaxHeight - MinHeight));
+        float height = Mathf.Abs(MinHeight + Random.value * (MaxHeight - MinHeight)) + Mathf.Min(startPos.y, targetPos.y);
 
-        float dx = TargetPoint.transform.position.x - SpawnPoint.transform.position.x;
+
+        height = Mathf.Max(height, targetPos.y, startPos.y);
+
+        float dx = targetPos.x - startPos.x;
 
         float distance = Mathf.Abs(dx) + (Random.value - 0.5f) * DistanceSpread;
 
@@ -48,9 +53,12 @@ public class RocketLauncher : MonoBehaviour {
 
         float gravity = -Physics2D.gravity.y;
 
-        float V0y = Mathf.Sqrt(2 * gravity * height);
-        float time = V0y / gravity * 2;
-        float V0x = distance / time;
+        float V0y = Mathf.Sqrt(2 * gravity * (height - startPos.y));
+        float timeup = V0y / gravity;
+
+        float timedown = Mathf.Sqrt(2 * (height - targetPos.y) / gravity);
+
+        float V0x = distance / (timeup + timedown);
         return new Vector2(V0x * direction, V0y);
     }
 
