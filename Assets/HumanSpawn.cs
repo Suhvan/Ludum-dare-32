@@ -21,7 +21,7 @@ public class HumanSpawn : MonoBehaviour {
         GameObject humanObj = Instantiate(HumanPref, SpawnPoint.transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
         Human human = humanObj.GetComponent<Human>();
         human.SetDestination(DestinationPoint);
-
+        human.parent = gameObject;
     }
 	
 	void Update () {
