@@ -47,6 +47,10 @@ public class Human : MonoBehaviour {
         }
         set
         {
+            if (isCaptured && !value)
+            {
+                rigidBody.velocity = Vector2.zero;
+            }
             isCaptured = value;
             //rigidBody.isKinematic = isCaptured;
         }
