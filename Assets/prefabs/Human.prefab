@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  parent: {fileID: 0}
   rigidBody: {fileID: 0}
 --- !u!212 &21239486
 SpriteRenderer:

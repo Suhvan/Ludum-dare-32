@@ -23,6 +23,16 @@ class GameCore : MonoBehaviour
 			{
 				var gObj = new GameObject();
 				m_intance = gObj.AddComponent<GameCore>();
+                var cities = FindObjectsOfType<HumanCity>();
+                if (cities.Length != 2)
+                {
+                    Debug.LogError("Defuq? can't find cites");
+                }
+                else                
+                {
+                    m_intance.leftCity = cities[0];
+                    m_intance.rightCity = cities[1];
+                }
 			}
 			return m_intance;
         }

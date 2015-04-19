@@ -74,6 +74,7 @@ GameObject:
   - 4: {fileID: 408324}
   - 114: {fileID: 11407226}
   - 114: {fileID: 11465728}
+  - 114: {fileID: 11497266}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -198,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.0900002, y: .460000008, z: 0}
+  m_LocalPosition: {x: -16.1299992, y: .460000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450338}
@@ -389,6 +390,23 @@ MonoBehaviour:
   MinHeight: 2
   MaxHeight: 13
   DistanceSpread: 10
+--- !u!114 &11497266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e602a121040fee348a1aa3f407ef4000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HumanPref: {fileID: 148204, guid: b953378c55a8f08438b922da2d360965, type: 2}
+  SpawnPoint: {fileID: 163112}
+  DestinationPoint: {fileID: 0}
+  SpawnCooldown: 5
+  SpawnDelay: 0
+  DestinationSpread: 0
 --- !u!212 &21213410
 SpriteRenderer:
   m_ObjectHideFlags: 1
