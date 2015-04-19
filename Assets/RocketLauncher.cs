@@ -4,13 +4,15 @@ using System.Collections;
 public class RocketLauncher : MonoBehaviour {
 
     public float rocketSpawnCD = 2;
-    private float rocketSpawnClock;
+    public float rocketSpawnClock;
+    public float gravitySpread = 10;
     private bool preEffectShown = false;
 
     public GameObject RocketPref;
     public GameObject SpawnPoint;
     public GameObject PreRocketSpawnPref;
     public GameObject TargetPoint;
+    
 
     public float MinHeight = 2;
     public float MaxHeight = 13;
@@ -34,7 +36,7 @@ public class RocketLauncher : MonoBehaviour {
         }
     }
 
-    private Vector2 RocketImpulse()
+    private Vector2 RocketImpulse(Thrust tr)
     {
 
         Vector2 targetPos = TargetPoint.transform.position;
@@ -51,7 +53,7 @@ public class RocketLauncher : MonoBehaviour {
 
         float direction = Mathf.Sign(dx);
 
-        float gravity = -Physics2D.gravity.y;
+        float gravity = -Physics2D.gravity.y * tr.rigidBody.gravityScale;
 
         float V0y = Mathf.Sqrt(2 * gravity * (height - startPos.y));
         float timeup = V0y / gravity;
@@ -66,7 +68,8 @@ public class RocketLauncher : MonoBehaviour {
     {
         GameObject rocket = Instantiate(RocketPref, SpawnPoint.transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
         Thrust thrust = rocket.GetComponent<Thrust>();
-        thrust.SetImpulse(RocketImpulse());
+        thrust.rigidBody.gravityScale = Random.value * gravitySpread + 1;
+        thrust.SetImpulse(RocketImpulse(thrust));
     }
 
 }

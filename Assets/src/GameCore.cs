@@ -9,6 +9,9 @@ class GameCore : MonoBehaviour
 {
 
     public int looserScore = -100;
+    public int winnerScore = 100;
+
+    public bool gameOver = false;
 	private static GameCore m_intance;
     public static GameCore instance
     {
@@ -33,11 +36,16 @@ class GameCore : MonoBehaviour
         set 
         {
             _score = value;
-            if (_score < looserScore)
+            if (_score < looserScore || _score > winnerScore)
             {
-                Time.timeScale = 0;
+                gameOver = true;
             }
         } 
+    } 
+
+    public bool Victorious 
+    {
+        get { return _score > winnerScore; }
     }
 
     public void OnRocketDisabled()
@@ -60,6 +68,8 @@ class GameCore : MonoBehaviour
     {
         score += 3;
     }
+
+    
 
 }
 

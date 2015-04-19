@@ -95,13 +95,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketSpawnCD: 1
+  rocketSpawnClock: 0
+  gravitySpread: 2
   RocketPref: {fileID: 151900, guid: c45ddcf201c4e444891b7e507f83ebf3, type: 2}
   SpawnPoint: {fileID: 0}
   PreRocketSpawnPref: {fileID: 109016, guid: e0fdf87a2055881418e3f261d6b4086c, type: 2}
   TargetPoint: {fileID: 0}
-  MinHeight: .5
-  MaxHeight: .5
-  DistanceSpread: 5
+  MinHeight: 1
+  MaxHeight: 15
+  DistanceSpread: 10
 --- !u!212 &21244164
 SpriteRenderer:
   m_ObjectHideFlags: 1

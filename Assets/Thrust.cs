@@ -4,7 +4,7 @@ using System.Collections;
 public class Thrust : MonoBehaviour
 {
 
-    Rigidbody2D rigidBody;
+    public Rigidbody2D rigidBody;
 
     public float thrust = 10;
 
