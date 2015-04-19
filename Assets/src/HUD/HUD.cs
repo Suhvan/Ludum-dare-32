@@ -32,5 +32,11 @@ class HUD : MonoBehaviour
 		topPanel.stamina.value = GameCore.instance.stamina;
     }
 
+    public void ClickSound()
+    {
+        gameObject.GetComponent<AudioSource>().gameObject.SetActive(true);
+        gameObject.GetComponent<AudioSource>().Play();
+    }
+
 }
 
