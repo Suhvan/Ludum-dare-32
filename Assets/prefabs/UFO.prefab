@@ -334,8 +334,6 @@ MonoBehaviour:
   lr: {fileID: 12092630}
   forceScale: .150000006
   gravicapa: {fileID: 11487036}
-  staminaReduceValue: .5
-  staminaIncreaseValue: .600000024
   pukan: {fileID: 11495290}
 --- !u!114 &11487036
 MonoBehaviour:
@@ -356,6 +354,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 21294468}
   activeColor: {r: .235294119, g: .701960802, b: .235294119, a: .635294139}
   audioSource: {fileID: 8284842}
+  staminaReduceValue: .400000006
+  staminaIncreaseValue: .5
 --- !u!114 &11495290
 MonoBehaviour:
   m_ObjectHideFlags: 1
