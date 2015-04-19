@@ -39,6 +39,8 @@ public class Human : MonoBehaviour {
 
     private float destinationX = 0;
 
+    public GameObject ExplosionSave;
+
     public bool IsCaptured
     {
         get
@@ -125,8 +127,7 @@ public class Human : MonoBehaviour {
                 Die(col.contacts[0].point);                
                 break;
             case "UFO":
-                GameCore.instance.onHumanSaved(gameObject);
-                Destroy(gameObject);
+                Save(col.contacts[0].point);
                 break;
             case "Ground":
                 if (rigidBody.velocity.sqrMagnitude > DeadSpeed)
@@ -145,6 +146,13 @@ public class Human : MonoBehaviour {
     {
         GameCore.instance.onHumanDied(gameObject);
         Instantiate(ExplosionPref, pos, new Quaternion(0, 0, 0, 0));
+        Destroy(gameObject);
+    }
+
+    void Save(Vector2 pos)
+    {
+        GameCore.instance.onHumanSaved(gameObject);        
+        Instantiate(ExplosionSave, pos, new Quaternion(0, 0, 0, 0));
         Destroy(gameObject);
     }
 }

@@ -7,14 +7,14 @@ using UnityEngine;
 
 class GameCore : MonoBehaviour
 {
-
-    public int looserScore = -100;
-    public int winnerScore = 100;
-    public int UFOlives = 5;
+    public const int MAX_LIVES = 5;
+    public int UFOlives = MAX_LIVES;
+    public int UFODamage { get { return MAX_LIVES - UFOlives; } }
     public HumanCity leftCity;
     public HumanCity rightCity;
 
     public bool gameOver = false;
+
 	private static GameCore m_intance;
     public static GameCore instance
     {

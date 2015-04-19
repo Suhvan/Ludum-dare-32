@@ -335,6 +335,7 @@ MonoBehaviour:
   forceScale: .150000006
   gravicapa: {fileID: 11487036}
   pukan: {fileID: 11495290}
+  lifeState: -1
 --- !u!114 &11487036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,13 +370,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emissionMod: 1
   speedMod: 1
+  ps: {fileID: 0}
 --- !u!120 &12092630
 LineRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113312}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -580,10 +582,10 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4294704120
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: .239999995
       maxCurve:
         serializedVersion: 2
         m_Curve:
