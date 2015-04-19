@@ -29,8 +29,6 @@ public class Human : MonoBehaviour {
 
     public GameObject ExplosionPref;
 
-    GameObject destinationPoint;
-
     public Rigidbody2D rigidBody;
 
     private bool isCaptured;
@@ -38,6 +36,8 @@ public class Human : MonoBehaviour {
     public float DeadSpeed = 120;
 
     private float prevSpeed = 0;
+
+    private float destinationX = 0;
 
     public bool IsCaptured
     {
@@ -70,9 +70,9 @@ public class Human : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 
-    public void SetDestination(GameObject destinationPoint)
+    public void SetDestination(float x)
     {
-        this.destinationPoint = destinationPoint;
+        destinationX = x;
     }
 
 	// Use this for initialization
@@ -85,15 +85,22 @@ public class Human : MonoBehaviour {
         if (!(IsCaptured || IsFalling))
         {
             //rigidBody.velocity = new Vector2(walkSpeed * Mathf.Sign(destinationPoint.transform.position.x - transform.position.x), rigidBody.velocity.y);
-            var sign = Mathf.Sign(destinationPoint.transform.position.x - transform.position.x);
-            if(sign>0)
+            float dx = destinationX - transform.position.x;
+            float sign = Mathf.Sign(dx);
+
+            if(Mathf.Abs(dx) < 0.1f)
+            {
+                state = AnimatorState.STAND;
+            }
+            else if (sign > 0)
             {
                 state = AnimatorState.RIGTH;
             }
-            else
+            else if (sign < 0)
             {
                 state = AnimatorState.LEFT;
             }
+
             rigidBody.AddForce(new Vector2(walkSpeed * sign, rigidBody.velocity.y));
         }
         else

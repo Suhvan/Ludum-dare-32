@@ -49,7 +49,7 @@ public class HumanSpawn : MonoBehaviour {
         {
             GameObject humanObj = Instantiate(HumanPref, transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
             Human human = humanObj.GetComponent<Human>();
-            human.SetDestination(DestinationPoint);
+            human.SetDestination(DestinationPoint.transform.position.x + (Random.value - 0.5f) * DestinationSpread);
             human.gameObject.transform.parent = City.transform;
             ++Spawned;
         }
