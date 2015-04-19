@@ -9,7 +9,7 @@ class PauseMenu : MonoBehaviour
 {
     public void onResume()
     {
-        Time.timeScale = 1;
+		GameCore.instance.onPause = false;
         gameObject.SetActive(false);        
     }
 
@@ -20,7 +20,7 @@ class PauseMenu : MonoBehaviour
 
     public void onRestart()
     {
-        Time.timeScale = 1;
+		GameCore.instance.onPause = false;
         Application.LoadLevel(1);
     }
 }
