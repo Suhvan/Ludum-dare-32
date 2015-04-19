@@ -354,7 +354,7 @@ MonoBehaviour:
   pickUpSpeed: 10
   fixHeight: {fileID: 11407706}
   spriteRenderer: {fileID: 21294468}
-  activeColor: {r: .235294119, g: .701960802, b: .235294119, a: .635294139}
+  activeColor: {r: 0, g: 1, b: .131034613, a: .529411793}
   audioSource: {fileID: 8284842}
 --- !u!114 &11495290
 MonoBehaviour:
@@ -1839,7 +1839,7 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4279500544
         key1:
           serializedVersion: 2
           rgba: 16777215
