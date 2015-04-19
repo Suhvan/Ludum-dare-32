@@ -25,7 +25,7 @@ class HUD : MonoBehaviour
         else if (GameCore.instance.gameOver)
         {
             overed = true;
-            debrief.SetResult(GameCore.instance.Victorious);
+            debrief.SetResult();
         }
 
         topPanel.score.text = GameCore.instance.score.ToString();

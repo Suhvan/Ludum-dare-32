@@ -9,20 +9,32 @@ using UnityEngine.UI;
 class Debrief : MonoBehaviour
 {
 
-    public Text result;
+    public Text summary;
 
-    public void SetResult(bool won)
+    public Text leftCityStats;
+
+    public Text rightCityStats;
+
+    public void SetResult()
     {
 		GameCore.instance.onPause = true;
 
-        if (won)
+        if (GameCore.instance.TotalLoss)
         {
-            result.text = "You won!";
+            summary.text = "Entire city population wasted!";
+        }
+        else if (GameCore.instance.TotalWin)
+        {
+            summary.text = "Wow, you saved everyone!";
         }
         else
         {
-            result.text = "You lost!";
+            summary.text = "You could save more people...";
         }
+
+        leftCityStats.text = string.Format("{0}/{1} millions", GameCore.instance.leftCity.humans.survivalCount, GameCore.instance.leftCity.humans.totalCount);
+        rightCityStats.text = string.Format("{0}/{1} millions", GameCore.instance.rightCity.humans.survivalCount, GameCore.instance.rightCity.humans.totalCount);
+
         this.gameObject.SetActive(true);
     }
     
