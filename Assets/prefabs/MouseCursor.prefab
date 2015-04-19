@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c8394443638894cad14e5998de4169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  altLimit: 350
+  altLimit: 225
 --- !u!212 &21255608
 SpriteRenderer:
   m_ObjectHideFlags: 1
