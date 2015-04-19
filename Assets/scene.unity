@@ -859,10 +859,6 @@ Prefab:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 1443645483}
-    - target: {fileID: 11470346, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
-      propertyPath: pukan
-      value: 
-      objectReference: {fileID: 1408302329}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
   m_IsPrefabParent: 0
