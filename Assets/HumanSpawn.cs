@@ -20,7 +20,6 @@ public class HumanSpawn : MonoBehaviour {
 
         set
         {
-            Debug.Log("Spawned " + value);
             m_spawned = value;
         }
     }

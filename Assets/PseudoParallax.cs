@@ -22,7 +22,7 @@ public class PseudoParallax : MonoBehaviour {
 
 		var screenCoords = Camera.main.WorldToScreenPoint(controller.transform.position);
 
-		float relativePos = ((screenCoords.x / Screen.width) - 0.5f) * 2;
+		float relativePos = ((screenCoords.x / Screen.width) - 0.5f) * -2;
 
 		//float relativePos =  ((cursor.clampedMouse.x / Screen.width ) - 0.5f) * 2;
 
