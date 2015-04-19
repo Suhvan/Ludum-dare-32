@@ -28,6 +28,12 @@ public class Gravicapa : MonoBehaviour {
 	[SerializeField]
 	private AudioSource audioSource;
 
+	[SerializeField]
+	private float staminaReduceValue;
+
+	[SerializeField]
+	private float staminaIncreaseValue;
+
 	private Color defaultColor;
 
     // Use this for initialization
@@ -82,6 +88,17 @@ public class Gravicapa : MonoBehaviour {
 		set;
 	}
 
+	void Update()
+	{
+		if (ForceUp)
+			GameCore.instance.stamina -= Time.deltaTime * staminaReduceValue;
+		else
+			GameCore.instance.stamina += Time.deltaTime * staminaIncreaseValue;
+
+		if (GameCore.instance.stamina <= 0.01)
+			ForceUp = false;
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
@@ -89,7 +106,7 @@ public class Gravicapa : MonoBehaviour {
 
 			fixHeight.gameObject.SetActive(ForceUp);
 
-			if (ForceUp && GameCore.instance.stamina > 0)
+			if (ForceUp)
 			{
 				
 				AddForceForEachRocket(forceValue);
