@@ -35,12 +35,16 @@ namespace Assets
 
 		void Update()
 		{
+			if (GameCore.instance.onPause)
+				return;
+
 			if (gravicapa.ForceUp)
 			{
 				GameCore.instance.stamina -= Time.deltaTime * staminaReduceValue;
 			}
 			else
 				GameCore.instance.stamina += Time.deltaTime * staminaIncreaseValue;
+
 
 			lr.SetPosition(0, transform.position);
 			lr.SetPosition(1, cursor.transform.position);

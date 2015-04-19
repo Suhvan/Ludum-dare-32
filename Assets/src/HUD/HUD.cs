@@ -19,8 +19,8 @@ class HUD : MonoBehaviour
             return;
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            Time.timeScale = 0;
             pauseMenu.gameObject.SetActive(true);
+			GameCore.instance.onPause = true;
         }
         else if (GameCore.instance.gameOver)
         {

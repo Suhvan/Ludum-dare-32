@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c8394443638894cad14e5998de4169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  altLimit: 10
 --- !u!1001 &1491168013
 Prefab:
   m_ObjectHideFlags: 0
@@ -740,7 +741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433208, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11470346, guid: b684dece7293c874f93d63ef79ff3d98, type: 2}
       propertyPath: cursor
@@ -892,10 +893,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 11497266, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: DestinationPoint
-      value: 
-      objectReference: {fileID: 65137367}
     - target: {fileID: 163112, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: m_Name
       value: City 1
@@ -910,6 +907,10 @@ Prefab:
       objectReference: {fileID: 910288861}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: UFO
+      value: 
+      objectReference: {fileID: 65137367}
+    - target: {fileID: 11497266, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: DestinationPoint
       value: 
       objectReference: {fileID: 65137367}
     m_RemovedComponents: []
@@ -952,7 +953,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22489664, guid: dce8d350110217d44a0370422e73b86a, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 22489664, guid: dce8d350110217d44a0370422e73b86a, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1044,10 +1045,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 11497266, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
-      propertyPath: DestinationPoint
-      value: 
-      objectReference: {fileID: 65137367}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: SpawnPoint
       value: 
@@ -1058,6 +1055,10 @@ Prefab:
       objectReference: {fileID: 1688359933}
     - target: {fileID: 11465728, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
       propertyPath: UFO
+      value: 
+      objectReference: {fileID: 65137367}
+    - target: {fileID: 11497266, guid: 2300fc122faa2ca4c815210d7ae23e23, type: 2}
+      propertyPath: DestinationPoint
       value: 
       objectReference: {fileID: 65137367}
     m_RemovedComponents: []

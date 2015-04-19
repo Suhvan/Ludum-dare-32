@@ -41,6 +41,17 @@ class GameCore : MonoBehaviour
 	private float m_stamina = 1.0f;
 	public float stamina { get { return m_stamina; } set { m_stamina = Mathf.Clamp01(value); } }
 
+	private bool m_onPause = false;
+	public bool onPause { get { return m_onPause; } set 
+	{ 
+		m_onPause = value; 
+		if (value)
+			Time.timeScale = 0f;
+		else
+			Time.timeScale = 1f;
+		}
+	}
+
     private int _score;
     public int score 
     { 

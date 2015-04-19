@@ -13,7 +13,8 @@ class Debrief : MonoBehaviour
 
     public void SetResult(bool won)
     {
-        Time.timeScale = 0;
+		GameCore.instance.onPause = true;
+
         if (won)
         {
             result.text = "You won!";
