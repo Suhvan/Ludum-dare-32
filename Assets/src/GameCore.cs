@@ -7,7 +7,7 @@ using UnityEngine;
 
 class GameCore : MonoBehaviour
 {
-    private const int MAX_LIVES = 5;
+    public const int MAX_LIVES = 5;
     public int UFOlives = MAX_LIVES;
     public int UFODamage { get { return MAX_LIVES - UFOlives; } }
     public HumanCity leftCity;

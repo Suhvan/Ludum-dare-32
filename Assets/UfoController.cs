@@ -27,6 +27,7 @@ namespace Assets
 			
 		}
 
+        public int lifeState = -1;
 		void Update()
 		{
 			if (GameCore.instance.onPause)
@@ -46,8 +47,37 @@ namespace Assets
 			if (Input.GetMouseButtonUp(0))
 				gravicapa.ForceUp = false;
 
-			//Debug.DrawLine(transform.position, cursor.transform.position, Color.red);
+            if (GameCore.instance.UFODamage != lifeState)
+            {
+                lifeState = GameCore.instance.UFODamage;
+                SwitchPukan();
+            }
             pukan.ApplyThrust(force * -1.0f);
 		}
+
+        public void SwitchPukan()
+        {
+            switch (lifeState)
+            { 
+                case 0:
+                    pukan.gameObject.SetActive(false);
+                    break;
+                case 1:
+                    pukan.gameObject.SetActive(true);
+                    break;
+               case 2:
+                    pukan.ps.startSize = 0.5f;
+                    break;
+                case 3:
+                    pukan.ps.startSize = 1f;
+                    pukan.ps.startColor = Color.grey;
+                    break;
+                case 4:
+                    pukan.ps.startColor = Color.black;
+                    break;
+                default:
+                    break;
+            }
+        }
 	}
 }

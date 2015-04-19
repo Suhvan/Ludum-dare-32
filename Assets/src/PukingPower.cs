@@ -9,9 +9,11 @@ public class PukingPower : MonoBehaviour {
     private float baseEmissionRate;
     private float baseParticleSpeed;
 
+    public ParticleSystem ps;
+
     void Start()
     {
-        ParticleSystem ps = GetComponent<ParticleSystem>() as ParticleSystem;
+        ps = GetComponent<ParticleSystem>() as ParticleSystem;
         baseEmissionRate = ps.emissionRate;
         baseParticleSpeed = ps.startSpeed;
     }
