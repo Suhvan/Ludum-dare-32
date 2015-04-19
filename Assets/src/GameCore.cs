@@ -10,6 +10,7 @@ class GameCore : MonoBehaviour
 
     public int looserScore = -100;
     public int winnerScore = 100;
+    public int UFOlives = 5;
     public HumanCity leftCity;
     public HumanCity rightCity;
 
@@ -86,6 +87,11 @@ class GameCore : MonoBehaviour
     public void onUFODamaged()
     {
         stamina = 0;
+        UFOlives--;
+        if (UFOlives == 0)
+        {
+            gameOver = true;
+        }
     }
 
     public void onHumanDied(GameObject human)

@@ -27,6 +27,10 @@ class Debrief : MonoBehaviour
         {
             summary.text = "Wow, you saved everyone!";
         }
+        else if(GameCore.instance.UFOlives == 0)
+        {
+            summary.text = "Your ship was significantly damaged!";
+        }
         else
         {
             summary.text = "You could save more people...";
