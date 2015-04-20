@@ -607,9 +607,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 5ad6846d73b328a4791b3c5f35d4678e, type: 3}
     m_FontSize: 11
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 110
     m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -618,10 +618,10 @@ MonoBehaviour:
   m_Text: "You can play for an alien that trying to save humanity from self-destruction.
     A flying saucer is equipped with the gravity gun, it helps to avert the missiles
     from the cities and evacuate civilans.\r\n\r\nThe gravity gun is not a typical
-    weapon. It allows you to fight against the was-obsessed people.\r\n\r\nLeft click
-    will activate the gravity gun.\n\r\nIvan Sukhanov - Programmer\r\nAlexander Uvarov
-    -  Programmer\r\nArtem Baryshev - Programmer\r\nAndrey Ishuk - Programmer\r\nVladislav
-    Suhov - Art / Designer\r\nEvgeny Bushuev - Designer"
+    weapon. It allows you to fight against the war-obsessed people.\r\n\r\nLeft click
+    will activate the gravity gun.\n\nAndrey Samoiloff - Sound director\r\nIvan Sukhanov
+    - Programmer\r\nAlexander Uvarov -  Programmer\r\nArtem Baryshev - Programmer\r\nAndrey
+    Ishchuk - Programmer\r\nVladislav Suhov - Art / Designer\r\nEvgeny Bushuev - Designer\n"
 --- !u!114 &11464368
 MonoBehaviour:
   m_ObjectHideFlags: 1
