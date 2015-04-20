@@ -10,6 +10,7 @@ class HUD : MonoBehaviour
     public TopPanel topPanel;
     public PauseMenu pauseMenu;
     public Debrief debrief;
+    public AdvisePanel advicePanel;
 
     private bool overed = false;
 
@@ -17,15 +18,18 @@ class HUD : MonoBehaviour
     {
         if (overed)
             return;
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             pauseMenu.gameObject.SetActive(true);
 			GameCore.instance.onPause = true;
+            advicePanel.Show();
         }
         else if (GameCore.instance.gameOver)
         {
             overed = true;
             debrief.SetResult();
+            advicePanel.Show();
         }
 
         topPanel.score.text = GameCore.instance.score.ToString();

@@ -10,28 +10,28 @@ using UnityEngine.UI;
 class AdvisePanel : MonoBehaviour
 {
     public Text advice;
-    public int seconds=3;
 
-    private string[] advices = {"Save people! Harvest them with your gravitygun (LMB)",
+    private string[] advices = {"Save people! Harvest them with your tractor beam (LMB)",
         "When rocket hits city, it kills people.",
         "You are not immortal!",
-        "It's not a cat!",
-        "Redirect rockets using your gravitygun (LMB)",
+        "Redirect rockets using your tractor beam (LMB)",
         "Red rockets aims at YOU!",
-        "There is gravitygun (LMB) charge at top left corner",
+        "There is tractor beam (LMB) charge at top left corner",
         "You must save everyone!",
         "Don't let people die!"};
+    
 
-    void Start()
+    public void Show()
     {
+        gameObject.SetActive(true);
         advice.text = advices[UnityEngine.Random.Range(0, advices.Length - 1)];
-        StartCoroutine(Hider());
     }
 
-    System.Collections.IEnumerator Hider()
+
+    public void Hide()
     {
-        yield return new WaitForSeconds(seconds);
-        gameObject.SetActive(false);     
+        gameObject.SetActive(false);
     }
+
 }
 

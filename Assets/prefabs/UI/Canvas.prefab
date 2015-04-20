@@ -26,14 +26,13 @@ GameObject:
   - 222: {fileID: 22255040}
   - 114: {fileID: 11402886}
   - 114: {fileID: 11416078}
-  - 111: {fileID: 11103154}
   m_Layer: 5
   m_Name: Advice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &109464
 GameObject:
   m_ObjectHideFlags: 1
@@ -556,21 +555,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!111 &11103154
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108474}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 3f144ee766e576b4081bba0e8232f0d6, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 3f144ee766e576b4081bba0e8232f0d6, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!111 &11104374
 Animation:
   m_ObjectHideFlags: 1
@@ -802,7 +786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advice: {fileID: 11440958}
-  seconds: 3
 --- !u!114 &11416480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1141,7 +1124,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Redirect rockets with your beam(LMB). Save citizens!
+  m_Text: When rocket hits city, it kills people.
 --- !u!114 &11447670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1156,6 +1139,7 @@ MonoBehaviour:
   topPanel: {fileID: 11438236}
   pauseMenu: {fileID: 11427150}
   debrief: {fileID: 11468696}
+  advicePanel: {fileID: 11416078}
 --- !u!114 &11457232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1568,6 +1552,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11416078}
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11497952
@@ -1854,9 +1850,9 @@ RectTransform:
   - {fileID: 22441838}
   - {fileID: 22454472}
   m_Father: {fileID: 22489664}
-  m_RootOrder: 1
-  m_AnchorMin: {x: .254503191, y: .128194243}
-  m_AnchorMax: {x: .748324633, y: .871805787}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .254503191, y: .299251497}
+  m_AnchorMax: {x: .748324633, y: .902652144}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -2156,9 +2152,9 @@ RectTransform:
   - {fileID: 22457426}
   - {fileID: 22420642}
   m_Father: {fileID: 22489664}
-  m_RootOrder: 2
-  m_AnchorMin: {x: .254503191, y: .128194243}
-  m_AnchorMax: {x: .748324633, y: .871805787}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .254503191, y: .299251497}
+  m_AnchorMax: {x: .748324633, y: .902652144}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -2175,9 +2171,9 @@ RectTransform:
   - {fileID: 22470988}
   m_Father: {fileID: 22489664}
   m_RootOrder: 3
-  m_AnchorMin: {x: .244123772, y: .0370005146}
-  m_AnchorMax: {x: .765405238, y: .128194243}
-  m_AnchoredPosition: {x: -1.5, y: 0}
+  m_AnchorMin: {x: .254503191, y: .0986933336}
+  m_AnchorMax: {x: .748324633, y: .195495501}
+  m_AnchoredPosition: {x: -1.5, y: 3.05175781e-05}
   m_SizeDelta: {x: -3, y: 7}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22484298
@@ -2263,8 +2259,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22484298}
-  - {fileID: 22419064}
   - {fileID: 22479856}
+  - {fileID: 22419064}
   - {fileID: 22483270}
   m_Father: {fileID: 0}
   m_RootOrder: 0
