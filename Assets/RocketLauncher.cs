@@ -5,7 +5,8 @@ public class RocketLauncher : MonoBehaviour {
 
     public float rocketSpawnCD = 2;
     public float rocketSpawnClock;
-    public float gravitySpread = 2;
+    public float gravityGrow = 0;
+    public float gravityStart = 1;
     private bool preEffectShown = false;
 
     public GameObject RocketPref;
@@ -21,6 +22,8 @@ public class RocketLauncher : MonoBehaviour {
     public float MaxHeight = 13;
 
     public float DistanceSpread = 10;
+
+    private int RocketsLaunched = 0;
 
     private enum LaunchMode
     {
@@ -88,7 +91,8 @@ public class RocketLauncher : MonoBehaviour {
     {
         GameObject rocket = Instantiate(RocketPref, transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
         Thrust thrust = rocket.GetComponent<Thrust>();
-        thrust.rigidBody.gravityScale = Random.value * gravitySpread + 1;
+        RocketsLaunched++;
+        thrust.rigidBody.gravityScale = gravityStart + gravityGrow * RocketsLaunched;
 
         switch (launchMode)
         {
